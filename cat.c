@@ -7,9 +7,8 @@ main(int argc, char *argv[])
         char    ch;
         FILE    *fp;
         
-        printf("Number of arguments: %d\n", argc);
-        if (argc > 1) {
-                fp = fopen(argv[1], "r");
+        for (int i = 1; i < argc; i++) {
+                fp = fopen(argv[i], "r");
 
                 if (fp == NULL) {
                         perror("Error, could not open file.\n");
