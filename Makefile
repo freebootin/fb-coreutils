@@ -1,4 +1,4 @@
 cc = tcc
 
 cat:
-	cc -o cat cat.c
+	cc -g -o cat cat.c
