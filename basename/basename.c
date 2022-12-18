@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int
 main (int argv, char *argc[])
@@ -14,7 +15,15 @@ main (int argv, char *argc[])
                 exit(EXIT_FAILURE);
         }
 
-        printf("%s\n", argc[1]);
+        char *s, *prev;
+
+        for (s = argc[1] ; (s = strtok(s, "/")) != NULL; s = NULL) {
+                prev = s;
+        }
+
+        printf("%s\n", prev);
+
+        //printf("%s\n", argc[1]);
         exit(EXIT_SUCCESS);
 
         /* If string is null, skip to step 2. In the GNU implementation it
